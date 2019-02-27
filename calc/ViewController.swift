@@ -32,30 +32,38 @@ class ViewController: UIViewController {
     }
     
     @IBAction func OnOperatorPressed(_ sender: UIButton) {
-        if labelOutlet.text == nil {
+        if labelOutlet.text == nil || labelOutlet.text == "" {
             return
+        } else {
+            result = Double(labelOutlet.text!)!
+            switch sender.currentTitle {
+            case "+":
+                labelOutlet.text = ""
+                myoperator = "+"
+            case "-":
+                labelOutlet.text = ""
+                myoperator = "-"
+            case "x":
+                labelOutlet.text = ""
+                myoperator = "x"
+            case "/":
+                labelOutlet.text = ""
+                myoperator = "/"
+            default:
+                break
+            }
         }
-        result = Double(labelOutlet.text!)!
-        switch sender.currentTitle {
-        case "+":
-            labelOutlet.text = ""
-            myoperator = "+"
-        case "-":
-            labelOutlet.text = ""
-            myoperator = "-"
-        case "x":
-            labelOutlet.text = ""
-            myoperator = "x"
-        case "/":
-            labelOutlet.text = ""
-            myoperator = "/"
-        default:
-            break
+    }
+    @IBAction func OnBackButtonPressed(_ sender: UIButton) {
+        if labelOutlet.text == nil || labelOutlet.text == "" {
+            return
+        } else {
+                labelOutlet.text?.removeLast()
         }
     }
     
     @IBAction func SolutionButtonPressed(_ sender: UIButton) {
-        if labelOutlet.text == nil {
+        if labelOutlet.text == nil || labelOutlet.text == "" {
             return
         } else {
             let num2 = Double(labelOutlet.text!)!
@@ -69,8 +77,14 @@ class ViewController: UIViewController {
             case "/":
                 labelOutlet.text = String(result / num2)
             default:
+                labelOutlet.text = "错误"
                 break
             }
+            let res = Double(labelOutlet.text!)!
+            if res > 99999999999 {
+                labelOutlet.text = "Out of range!"
+            }
+            
         }
         
         
