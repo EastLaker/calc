@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E68251FB2227B26100DFB143 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68251FA2227B26100DFB143 /* ViewController.swift */; };
 		E6A500E9221E302700F6F842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A500E8221E302700F6F842 /* AppDelegate.swift */; };
-		E6A500EB221E302700F6F842 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A500EA221E302700F6F842 /* ViewController.swift */; };
+		E6A500EB221E302700F6F842 /* SingleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A500EA221E302700F6F842 /* SingleController.swift */; };
 		E6A500EE221E302700F6F842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6A500EC221E302700F6F842 /* Main.storyboard */; };
 		E6A500F0221E302800F6F842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6A500EF221E302800F6F842 /* Assets.xcassets */; };
 		E6A500F3221E302800F6F842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6A500F1221E302800F6F842 /* LaunchScreen.storyboard */; };
 		E6A500FE221E302800F6F842 /* calcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A500FD221E302800F6F842 /* calcTests.swift */; };
 		E6A50109221E302800F6F842 /* calcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A50108221E302800F6F842 /* calcUITests.swift */; };
+		E6A8C11E2227621300C3A6E3 /* AdvancedCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A8C11D2227621300C3A6E3 /* AdvancedCalcViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E68251FA2227B26100DFB143 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E6A500E5221E302700F6F842 /* calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A500E8221E302700F6F842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E6A500EA221E302700F6F842 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E6A500EA221E302700F6F842 /* SingleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleController.swift; sourceTree = "<group>"; };
 		E6A500ED221E302700F6F842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E6A500EF221E302800F6F842 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6A500F2221E302800F6F842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		E6A50104221E302800F6F842 /* calcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A50108221E302800F6F842 /* calcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcUITests.swift; sourceTree = "<group>"; };
 		E6A5010A221E302800F6F842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6A8C11D2227621300C3A6E3 /* AdvancedCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCalcViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				E6A500E8221E302700F6F842 /* AppDelegate.swift */,
-				E6A500EA221E302700F6F842 /* ViewController.swift */,
+				E6A500EA221E302700F6F842 /* SingleController.swift */,
 				E6A500EC221E302700F6F842 /* Main.storyboard */,
+				E6A8C11D2227621300C3A6E3 /* AdvancedCalcViewController.swift */,
 				E6A500EF221E302800F6F842 /* Assets.xcassets */,
 				E6A500F1221E302800F6F842 /* LaunchScreen.storyboard */,
 				E6A500F4221E302800F6F842 /* Info.plist */,
+				E68251FA2227B26100DFB143 /* ViewController.swift */,
 			);
 			path = calc;
 			sourceTree = "<group>";
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6A500EB221E302700F6F842 /* ViewController.swift in Sources */,
+				E6A500EB221E302700F6F842 /* SingleController.swift in Sources */,
 				E6A500E9221E302700F6F842 /* AppDelegate.swift in Sources */,
+				E68251FB2227B26100DFB143 /* ViewController.swift in Sources */,
+				E6A8C11E2227621300C3A6E3 /* AdvancedCalcViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
