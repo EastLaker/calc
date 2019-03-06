@@ -15,11 +15,11 @@ class SingleController: UIViewController {
     var preData:Double = 0
     var myoperator:String?
     var backwardsString:String?
-    var dotflag = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     @IBAction func OnNumButtonPressed(_ sender: UIButton) {
@@ -28,10 +28,8 @@ class SingleController: UIViewController {
             labelOutlet.text = sender.currentTitle!
         } else {
             if text == "." {
-                if dotflag == true {
+                if labelOutlet.text?.contains(".") ?? false {
                     return
-                } else {
-                    dotflag = true
                 }
             }
             labelOutlet.text?.append(contentsOf: text)
@@ -48,17 +46,13 @@ class SingleController: UIViewController {
             case "+":
                 labelOutlet.text = ""
                 myoperator = "+"
-                dotflag = false
             case "-":
-                dotflag = false
                 labelOutlet.text = ""
                 myoperator = "-"
             case "x":
-                dotflag = false
                 labelOutlet.text = ""
                 myoperator = "x"
             case "÷":
-                dotflag = false
                 labelOutlet.text = ""
                 myoperator = "/"
             default:
@@ -71,7 +65,6 @@ class SingleController: UIViewController {
             return
         } else {
             if labelOutlet.text?.last == "." {
-                dotflag = false
             }
                 labelOutlet.text?.removeLast()
         }
@@ -107,7 +100,25 @@ class SingleController: UIViewController {
     
     @IBAction func ClearButtonPressed(_ sender: UIButton) {
         labelOutlet.text = ""
-        dotflag = false
+    }
+    
+    @IBAction func OnSquarePressed(_ sender: UIButton) {
+        if labelOutlet.text == nil || labelOutlet.text == "" {
+            return
+        } else {
+            let num2 = Double(labelOutlet.text!)!
+            labelOutlet.text = String(num2 * num2)
+        }
+    }
+    
+    @IBAction func OnSquareRootPressed(_ sender: UIButton) {
+        if labelOutlet.text == nil || labelOutlet.text == "" {
+            return
+        } else {
+            let num2 = Double(labelOutlet.text!)!
+            labelOutlet.text = String(sqrt(num2))
+        }
+        
     }
     
     
